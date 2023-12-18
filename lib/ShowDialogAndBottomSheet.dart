@@ -7,11 +7,6 @@ class showDialogAndbottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("showDialogAndbottomSheet"),
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-      ),
       body: Column(
         children: [
           Expanded(
@@ -20,8 +15,6 @@ class showDialogAndbottomSheet extends StatelessWidget {
                 children: [
 
                   ListTile(
-                   tileColor: Colors.cyanAccent,
-                    splashColor: Colors.blue,
                     title: Text('name'),
                     subtitle: Text('Md. Shohanur rahaman'),
                     onTap: (){
@@ -31,44 +24,9 @@ class showDialogAndbottomSheet extends StatelessWidget {
                       );
                     },
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
                   ListTile(
-                    tileColor: Colors.cyanAccent,
                     title: Text('bottom sheet'),
                     subtitle: Text('please click here'),
-                    onTap: (){
-                     Get.bottomSheet(
-                        Container(
-                          color:Colors.blue,
-                          child: ListView(
-                            children: [
-                              Card(
-                                child: ListTile(
-
-                                  title:Text("Light Theme"),
-                                  tileColor: Colors.cyanAccent,
-                                  onTap: (){Get.changeTheme(ThemeData.light());
-                                  },
-                                ),
-                              ),
-
-                              Card(
-                                child: ListTile(
-                                
-                                  title:Text("dark Theme",style: TextStyle(color: Colors.blue),),
-                                  tileColor: Colors.black54,
-                                  onTap: (){
-                                    Get.changeTheme(ThemeData.dark());
-                                  },
-                                ),
-                              ),
-                            ],
-                          )
-                        )
-                     );
-                    },
                   ),
                 ],
               ),
